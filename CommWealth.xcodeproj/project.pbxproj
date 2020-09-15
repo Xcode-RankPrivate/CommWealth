@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,15 @@
 		8E2DC55D2510CBAA004C9CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2DC55B2510CBAA004C9CB9 /* Main.storyboard */; };
 		8E2DC55F2510CBAE004C9CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2DC55E2510CBAE004C9CB9 /* Assets.xcassets */; };
 		8E2DC5622510CBAE004C9CB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2DC5602510CBAE004C9CB9 /* LaunchScreen.storyboard */; };
+		8E2DC56A2510CE7B004C9CB9 /* PersonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC5692510CE7B004C9CB9 /* PersonTableCell.swift */; };
+		8E2DC56C2510D106004C9CB9 /* PeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DC56B2510D106004C9CB9 /* PeopleListViewController.swift */; };
+		EC8C5E6D9005CF1517F6B228 /* Pods_CommWealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A3C326F1441A63B563F4A /* Pods_CommWealth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FB883204A8BCFA43FF555A5 /* Pods-CommWealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommWealth.debug.xcconfig"; path = "Target Support Files/Pods-CommWealth/Pods-CommWealth.debug.xcconfig"; sourceTree = "<group>"; };
+		482A3C326F1441A63B563F4A /* Pods_CommWealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommWealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		843B0CD2840C52FDF5912A53 /* Pods-CommWealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommWealth.release.xcconfig"; path = "Target Support Files/Pods-CommWealth/Pods-CommWealth.release.xcconfig"; sourceTree = "<group>"; };
 		8E2DC5522510CBAA004C9CB9 /* CommWealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommWealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2DC5552510CBAA004C9CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E2DC5572510CBAA004C9CB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		8E2DC55E2510CBAE004C9CB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2DC5612510CBAE004C9CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E2DC5632510CBAE004C9CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E2DC5692510CE7B004C9CB9 /* PersonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableCell.swift; sourceTree = "<group>"; };
+		8E2DC56B2510D106004C9CB9 /* PeopleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8C5E6D9005CF1517F6B228 /* Pods_CommWealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DDD28B1757CB278D40959F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FB883204A8BCFA43FF555A5 /* Pods-CommWealth.debug.xcconfig */,
+				843B0CD2840C52FDF5912A53 /* Pods-CommWealth.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5BF730AFD7ADA1A88CB9B2A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				482A3C326F1441A63B563F4A /* Pods_CommWealth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E2DC5492510CBAA004C9CB9 = {
 			isa = PBXGroup;
 			children = (
 				8E2DC5542510CBAA004C9CB9 /* CommWealth */,
 				8E2DC5532510CBAA004C9CB9 /* Products */,
+				0DDD28B1757CB278D40959F9 /* Pods */,
+				5BF730AFD7ADA1A88CB9B2A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +84,12 @@
 		8E2DC5542510CBAA004C9CB9 /* CommWealth */ = {
 			isa = PBXGroup;
 			children = (
+				8E2DC56B2510D106004C9CB9 /* PeopleListViewController.swift */,
 				8E2DC5552510CBAA004C9CB9 /* AppDelegate.swift */,
 				8E2DC5572510CBAA004C9CB9 /* SceneDelegate.swift */,
 				8E2DC5592510CBAA004C9CB9 /* ViewController.swift */,
 				8E2DC55B2510CBAA004C9CB9 /* Main.storyboard */,
+				8E2DC5692510CE7B004C9CB9 /* PersonTableCell.swift */,
 				8E2DC55E2510CBAE004C9CB9 /* Assets.xcassets */,
 				8E2DC5602510CBAE004C9CB9 /* LaunchScreen.storyboard */,
 				8E2DC5632510CBAE004C9CB9 /* Info.plist */,
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E2DC5662510CBAE004C9CB9 /* Build configuration list for PBXNativeTarget "CommWealth" */;
 			buildPhases = (
+				95F3073C9E7F68807D5B07D4 /* [CP] Check Pods Manifest.lock */,
 				8E2DC54E2510CBAA004C9CB9 /* Sources */,
 				8E2DC54F2510CBAA004C9CB9 /* Frameworks */,
 				8E2DC5502510CBAA004C9CB9 /* Resources */,
+				C5DE5C92309A89B05ACCB913 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +165,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		95F3073C9E7F68807D5B07D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CommWealth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5DE5C92309A89B05ACCB913 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CommWealth/Pods-CommWealth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CommWealth/Pods-CommWealth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CommWealth/Pods-CommWealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E2DC54E2510CBAA004C9CB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2DC56C2510D106004C9CB9 /* PeopleListViewController.swift in Sources */,
 				8E2DC55A2510CBAA004C9CB9 /* ViewController.swift in Sources */,
 				8E2DC5562510CBAA004C9CB9 /* AppDelegate.swift in Sources */,
 				8E2DC5582510CBAA004C9CB9 /* SceneDelegate.swift in Sources */,
+				8E2DC56A2510CE7B004C9CB9 /* PersonTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +358,7 @@
 		};
 		8E2DC5672510CBAE004C9CB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB883204A8BCFA43FF555A5 /* Pods-CommWealth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +377,7 @@
 		};
 		8E2DC5682510CBAE004C9CB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 843B0CD2840C52FDF5912A53 /* Pods-CommWealth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
